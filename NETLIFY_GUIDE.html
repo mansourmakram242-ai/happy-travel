@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>دليل رفع الموقع على Netlify</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; background:#0D1117; color:#E8EAF0; direction:rtl; }
+  .hero { background:linear-gradient(135deg,#1E2530,#0D1117); padding:60px 40px; text-align:center; border-bottom:2px solid #C9A84C; }
+  .hero h1 { font-size:2.5rem; color:#C9A84C; margin-bottom:12px; }
+  .hero p { color:#8892A4; font-size:1.1rem; }
+  .container { max-width:900px; margin:0 auto; padding:40px 24px; }
+  .step { background:#161B22; border-radius:16px; padding:36px; margin-bottom:28px; border:1px solid rgba(201,168,76,0.2); }
+  .step-num { width:50px; height:50px; border-radius:50%; background:linear-gradient(135deg,#C9A84C,#E8C875); color:#0D1117; font-size:1.4rem; font-weight:900; display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+  .step h2 { color:#C9A84C; font-size:1.4rem; margin-bottom:12px; }
+  .step p { color:#8892A4; line-height:1.8; margin-bottom:12px; }
+  .step ul { color:#8892A4; padding-right:20px; line-height:2; }
+  .highlight { background:#1E2530; border:1px solid rgba(201,168,76,0.3); border-radius:10px; padding:16px 20px; margin:16px 0; }
+  .highlight code { color:#C9A84C; font-family:monospace; font-size:1rem; direction:ltr; display:inline-block; }
+  .img-guide { width:100%; border-radius:10px; background:#1E2530; padding:20px; margin:16px 0; text-align:center; color:#8892A4; border:2px dashed rgba(201,168,76,0.3); }
+  .badge { display:inline-block; background:rgba(201,168,76,0.2); color:#C9A84C; padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin:4px; }
+  .success { background:rgba(37,211,102,0.1); border:1px solid rgba(37,211,102,0.3); border-radius:10px; padding:20px; margin-top:20px; }
+  .success h3 { color:#25D366; margin-bottom:8px; }
+  .success p { color:#8892A4; }
+  .admin-box { background:rgba(201,168,76,0.1); border:2px solid rgba(201,168,76,0.4); border-radius:12px; padding:24px; margin-top:20px; }
+  .admin-box h3 { color:#C9A84C; margin-bottom:16px; font-size:1.2rem; }
+  table { width:100%; border-collapse:collapse; }
+  td { padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.08); color:#8892A4; }
+  td:first-child { color:#C9A84C; font-weight:700; width:140px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div style="font-size:3rem;margin-bottom:16px">🚀</div>
+  <h1>دليل رفع موقع Happy Travel على Netlify</h1>
+  <p>خطوة بخطوة — مجاناً بالكامل — لا تحتاج خبرة</p>
+</div>
+
+<div class="container">
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-num">1</div>
+    <h2>إنشاء حساب على Netlify</h2>
+    <p>افتح المتصفح وروح على:</p>
+    <div class="highlight"><code>https://netlify.com</code></div>
+    <p>اضغط على <strong style="color:#C9A84C">"Sign up"</strong> واختار <strong style="color:#C9A84C">"Sign up with Email"</strong></p>
+    <ul>
+      <li>ادخل إيميلك وكلمة مرور</li>
+      <li>راجع إيميلك وأكد التسجيل</li>
+      <li>✅ تم إنشاء الحساب!</li>
+    </ul>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-num">2</div>
+    <h2>فك ضغط الملفات على جهازك</h2>
+    <p>الـ ZIP اللي نزّلته اسمه:</p>
+    <div class="highlight"><code>happy-travel-website.zip</code></div>
+    <p><strong style="color:#C9A84C">على Windows:</strong> كليك يمين على الملف ← "Extract All" ← OK</p>
+    <p><strong style="color:#C9A84C">على Mac:</strong> داب كليك على الملف وهيفك لوحده</p>
+    <p>هتلاقي فولدر اسمه <code style="color:#C9A84C">happy-travel</code> — ده اللي هنرفعه.</p>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-num">3</div>
+    <h2>رفع الموقع على Netlify (Drag & Drop)</h2>
+    <p>بعد تسجيل الدخول، هتشوف الـ Dashboard. اتبع الخطوات دي:</p>
+    <ul>
+      <li>🔽 روح تحت الصفحة لحد ما تشوف مربع كبير فيه:</li>
+    </ul>
+    <div class="img-guide">
+      <div style="font-size:3rem;margin-bottom:12px">📂</div>
+      <div style="font-size:1.1rem;color:#C9A84C;font-weight:700">"Want to deploy a new site without connecting to Git?"</div>
+      <div style="margin-top:8px">"Drag and drop your site output folder here"</div>
+    </div>
+    <ul>
+      <li>افتح الفولدر <code style="color:#C9A84C">happy-travel</code> على جهازك</li>
+      <li>اسحب الفولدر كله وحطّه جوا المربع ده</li>
+      <li>انتظر ثواني وهيرفع لوحده ⏳</li>
+      <li>✅ الموقع اتنشر!</li>
+    </ul>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-num">4</div>
+    <h2>رابط الموقع</h2>
+    <p>بعد الرفع هتلاقي رابط شبه كده:</p>
+    <div class="highlight"><code>https://amazing-pyramids-123456.netlify.app</code></div>
+    <p>الرابط ده هو موقعك اللي تقدر تشاركه مع الناس 🎉</p>
+    <p><strong style="color:#C9A84C">تبغى رابط أحسن؟</strong> تقدر تغيّره:</p>
+    <ul>
+      <li>روح <strong>Site settings</strong> ← <strong>Change site name</strong></li>
+      <li>اكتب مثلاً: <code style="color:#C9A84C">happytravel-egypt</code></li>
+      <li>الرابط هيبقى: <code style="color:#C9A84C">https://happytravel-egypt.netlify.app</code></li>
+    </ul>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-num">5</div>
+    <h2>لوحة التحكم (Admin)</h2>
+    <p>بعد رفع الموقع، ادخل على لوحة التحكم من:</p>
+    <div class="highlight"><code>https://رابط-موقعك.netlify.app/admin/index.html</code></div>
+    
+    <div class="admin-box">
+      <h3>🔐 بيانات الدخول الافتراضية</h3>
+      <table>
+        <tr><td>Username</td><td style="color:white">admin</td></tr>
+        <tr><td>Password</td><td style="color:white">happytravel2024</td></tr>
+      </table>
+    </div>
+    
+    <p style="margin-top:16px"><strong style="color:#C9A84C">من لوحة التحكم تقدر:</strong></p>
+    <ul>
+      <li>➕ إضافة رحلة جديدة</li>
+      <li>✏️ تعديل أي رحلة</li>
+      <li>🗑️ حذف رحلة</li>
+      <li>🖼️ تغيير صورة الهيرو من جهازك</li>
+      <li>🔑 تغيير كلمة السر</li>
+    </ul>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step">
+    <div class="step-num">6</div>
+    <h2>تحديث الموقع لاحقاً</h2>
+    <p>لو عايز تعدل ملفات وترفع تحديث:</p>
+    <ul>
+      <li>روح <strong style="color:#C9A84C">Netlify Dashboard</strong> ← اختار موقعك</li>
+      <li>روح <strong style="color:#C9A84C">Deploys</strong></li>
+      <li>اسحب الفولدر المحدث على نفس المربع</li>
+      <li>✅ التحديث هيظهر فوراً!</li>
+    </ul>
+
+    <div class="success">
+      <h3>💡 ملاحظة مهمة</h3>
+      <p>لوحة التحكم بتحفظ التغييرات في متصفحك (localStorage). يعني التعديلات اللي بتعملها في لوحة التحكم بتظهر للي بيزور الموقع من نفس الجهاز. لو عايز التعديلات تظهر للكل، عدّل ملف <code style="color:#C9A84C">main.js</code> مباشرة وارفع تحديث.</p>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="step" style="background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.05));border-color:rgba(201,168,76,0.4)">
+    <h2 style="text-align:center;font-size:1.8rem">🎉 ملخص سريع</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px">
+      <span class="badge">1. سجّل على netlify.com</span>
+      <span class="badge">2. فك الـ ZIP</span>
+      <span class="badge">3. اسحب الفولدر</span>
+      <span class="badge">4. خد الرابط</span>
+      <span class="badge">5. ادخل لوحة التحكم</span>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <p style="color:#8892A4;font-size:1.1rem">واتساب للدعم: <strong style="color:#25D366">01010233852</strong></p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
