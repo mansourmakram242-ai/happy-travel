@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tours - Happy Travel</title>
+  <link rel="stylesheet" href="public/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-text"><i class="fas fa-paper-plane logo-icon"></i><span>Happy Travel</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i> <span id="currentLang">EN</span> <i class="fas fa-chevron-down"></i></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN"/> English</a>
+          <a href="#" onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png" alt="DE"/> Deutsch</a>
+          <a href="#" onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png" alt="FR"/> Français</a>
+        </div>
+      </div>
+      <a href="https://wa.me/201010233852" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="whatsapp_btn">WhatsApp</span></a>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-tag" data-i18n="tours_tag">Curated Experiences</p>
+    <h1 data-i18n="tours_page_title">All Tours</h1>
+    <p data-i18n="tours_page_sub">Explore our hand-crafted Egyptian experiences</p>
+  </div>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <button class="filter-btn active" onclick="applyFilter('all', this)" data-i18n="filter_all">All</button>
+  <button class="filter-btn" onclick="applyFilter('Cairo', this)" data-i18n="filter_cairo">Cairo</button>
+  <button class="filter-btn" onclick="applyFilter('Luxor', this)" data-i18n="filter_luxor">Luxor</button>
+  <button class="filter-btn" onclick="applyFilter('Aswan', this)" data-i18n="filter_aswan">Aswan</button>
+  <button class="filter-btn" onclick="applyFilter('Hurghada', this)" data-i18n="filter_hurghada">Hurghada</button>
+  <button class="filter-btn" onclick="applyFilter('Alexandria', this)">Alexandria</button>
+</div>
+
+<section class="tours-page-section">
+  <div class="container">
+    <div class="tours-all-grid" id="toursAllGrid">
+      <div class="loading-spinner"><i class="fas fa-compass fa-spin"></i></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fas fa-paper-plane"></i> Happy Travel</div>
+        <p data-i18n="footer_about">We specialize in domestic tourism across Egypt's most iconic destinations.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/201010233852" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_destinations">Destinations</h4>
+        <ul>
+          <li><a href="tours.html?loc=Cairo">Cairo</a></li>
+          <li><a href="tours.html?loc=Luxor">Luxor</a></li>
+          <li><a href="tours.html?loc=Aswan">Aswan</a></li>
+          <li><a href="tours.html?loc=Hurghada">Hurghada</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <ul>
+          <li><i class="fab fa-whatsapp"></i> 01010233852</li>
+          <li><i class="fas fa-envelope"></i> info@happytravel.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Egypt</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Happy Travel. <span data-i18n="footer_rights">All Rights Reserved.</span></p></div>
+  </div>
+</footer>
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="public/js/i18n.js"></script>
+<script src="public/js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function applyFilter(loc, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    loadAllTours(loc);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const loc = params.get('loc') || 'all';
+    if (loc !== 'all') {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        if (b.textContent.trim().toLowerCase() === loc.toLowerCase() ||
+            b.getAttribute('onclick') && b.getAttribute('onclick').includes(`'${loc}'`)) {
+          b.classList.add('active');
+          document.querySelector('.filter-btn.active:first-child')?.classList.remove('active');
+        }
+      });
+    }
+    loadAllTours(loc);
+  });
+</script>
+</body>
+</html>

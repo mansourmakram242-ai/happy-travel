@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Happy Travel</title>
+  <link rel="stylesheet" href="public/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-text"><i class="fas fa-paper-plane logo-icon"></i><span>Happy Travel</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i> <span id="currentLang">EN</span> <i class="fas fa-chevron-down"></i></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png"/> English</a>
+          <a href="#" onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png"/> Deutsch</a>
+          <a href="#" onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png"/> Français</a>
+        </div>
+      </div>
+      <a href="https://wa.me/201010233852" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-tag">Happy Travel</p>
+    <h1 data-i18n="contact_title">Get In Touch</h1>
+    <p data-i18n="contact_sub">We're here to help plan your perfect Egyptian adventure.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 data-i18n="contact_title">Get In Touch</h2>
+        <p data-i18n="contact_sub">We're here to help plan your perfect Egyptian adventure.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+            <div><h4>WhatsApp</h4><p>01010233852</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email</h4><p>info@happytravel.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h4>Location</h4><p>Egypt</p></div>
+          </div>
+          <a href="https://wa.me/201010233852" class="btn-whatsapp" target="_blank" style="margin-top:16px">
+            <i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 data-i18n="contact_form_title">Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label data-i18n="contact_name">Your Name</label>
+            <input type="text" name="name" required placeholder="Ahmed Mohamed"/>
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact_email">Email Address</label>
+            <input type="email" name="email" placeholder="ahmed@email.com"/>
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact_phone">Phone Number</label>
+            <input type="tel" name="phone" placeholder="+20 101 234 5678"/>
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact_msg">Your Message</label>
+            <textarea name="message" rows="5" required placeholder="I'm interested in a tour to Cairo..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" data-i18n="contact_send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fas fa-paper-plane"></i> Happy Travel</div>
+        <p data-i18n="footer_about">We specialize in domestic tourism across Egypt's most iconic destinations.</p>
+        <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/201010233852" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+      <div class="footer-col"><h4 data-i18n="footer_links">Quick Links</h4><ul><li><a href="index.html" data-i18n="nav_home">Home</a></li><li><a href="tours.html" data-i18n="nav_tours">Tours</a></li><li><a href="about.html" data-i18n="nav_about">About</a></li><li><a href="contact.html" data-i18n="nav_contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer_destinations">Destinations</h4><ul><li><a href="tours.html?loc=Cairo">Cairo</a></li><li><a href="tours.html?loc=Luxor">Luxor</a></li><li><a href="tours.html?loc=Aswan">Aswan</a></li><li><a href="tours.html?loc=Hurghada">Hurghada</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer_contact">Contact</h4><ul><li><i class="fab fa-whatsapp"></i> 01010233852</li><li><i class="fas fa-envelope"></i> info@happytravel.com</li><li><i class="fas fa-map-marker-alt"></i> Egypt</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Happy Travel. <span data-i18n="footer_rights">All Rights Reserved.</span></p></div>
+  </div>
+</footer>
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<script src="public/js/i18n.js"></script>
+<script src="public/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
