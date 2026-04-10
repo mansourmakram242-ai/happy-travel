@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Dashboard</h2>
+
+<input id="name" placeholder="Name"><br><br>
+<input id="price" placeholder="Price"><br><br>
+<input id="img" placeholder="Image URL"><br><br>
+
+<button onclick="add()">Add</button>
+
+<script>
+let data=[];
+fetch('../trips.json').then(r=>r.json()).then(d=>data=d);
+
+function add(){
+data.push({
+name:document.getElementById('name').value,
+price:document.getElementById('price').value,
+img:document.getElementById('img').value
+});
+
+let blob=new Blob([JSON.stringify(data,null,2)]);
+let a=document.createElement('a');
+a.href=URL.createObjectURL(blob);
+a.download='trips.json';
+a.click();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Travel</title>
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+<h1 style="text-align:center">Happy Travel - Hurghada</h1>
+
+<div id="toursGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px"></div>
+
+<a href="https://wa.me/201010233852" target="_blank" 
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%">WhatsApp</a>
+
+<script>
+fetch('trips.json')
+.then(res=>res.json())
+.then(data=>{
+let grid=document.getElementById("toursGrid");
+data.forEach(t=>{
+grid.innerHTML+=`
+<div style="background:#fff;border-radius:10px;overflow:hidden">
+<img src="${t.img}" style="width:100%;height:180px;object-fit:cover">
+<h3>${t.name}</h3>
+<p>${t.price}</p>
+<a href="https://wa.me/201010233852">Book</a>
+</div>`;
+});
+});
+</script>
+
+</body>
+</html>
