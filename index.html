@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Travel - Hurghada Trips</title>
+<link rel="stylesheet" href="public/css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <h2 style="color:#fff">Happy Travel</h2>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center">Hurghada Trips</h2>
+    <div class="tours-grid" id="toursGrid"></div>
+  </div>
+</section>
+
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+const trips = [
+{name:"Orange Bay Island",price:"30€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Paradise Island",price:"35€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Dolphin House",price:"40€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Snorkeling Trip",price:"25€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Safari Quad",price:"20€",img:"https://images.unsplash.com/photo-1518684079-3c830dcef090"},
+{name:"Super Safari",price:"35€",img:"https://images.unsplash.com/photo-1518684079-3c830dcef090"},
+{name:"Buggy Safari",price:"30€",img:"https://images.unsplash.com/photo-1518684079-3c830dcef090"},
+{name:"Glass Boat",price:"15€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Submarine",price:"50€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Fishing Trip",price:"45€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Private Boat",price:"120€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"VIP Island",price:"70€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"},
+{name:"Horse Riding",price:"25€",img:"https://images.unsplash.com/photo-1501706362039-c6e80948c4b7"},
+{name:"Camel Ride",price:"15€",img:"https://images.unsplash.com/photo-1558980664-10ea8c5c3a2b"},
+{name:"City Tour Hurghada",price:"10€",img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e"}
+];
+
+const container = document.getElementById("toursGrid");
+
+trips.forEach(trip=>{
+container.innerHTML += `
+<div class="card">
+<img src="${trip.img}" style="width:100%;height:180px;object-fit:cover">
+<h3 style="margin:10px">${trip.name}</h3>
+<p style="margin:10px">${trip.price}</p>
+<a href="https://wa.me/201010233852" style="display:block;margin:10px;background:#25D366;color:#fff;text-align:center;padding:10px;border-radius:5px;text-decoration:none">Book Now</a>
+</div>`;
+});
+</script>
+
+</body>
+</html>
