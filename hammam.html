@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turkish Bath & Spa - Happy Travel</title>
+  <link rel="stylesheet" href="public/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-text"><i class="fas fa-paper-plane logo-icon"></i><span>Happy Travel</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="transfer.html" data-i18n="nav_transfer">Transfer</a></li>
+      <li><a href="hammam.html" data-i18n="nav_hammam">Turkish Bath</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i> <span id="currentLang">EN</span> <i class="fas fa-chevron-down"></i></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png"/> English</a>
+          <a href="#" onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png"/> Deutsch</a>
+          <a href="#" onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png"/> Français</a>
+        </div>
+      </div>
+      <a href="https://wa.me/201010233852" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hammam-hero">
+  <div class="container">
+    <p class="section-tag"><i class="fas fa-spa"></i> Luxury Wellness</p>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);color:white;margin-bottom:16px">Turkish Bath & Spa</h1>
+    <p style="color:rgba(255,255,255,0.8);font-size:1.2rem;max-width:600px;margin:0 auto">Experience the ancient ritual of the hammam — a journey of relaxation, rejuvenation, and pure luxury</p>
+  </div>
+</div>
+
+<!-- LOCATIONS BANNER -->
+<div style="background:var(--dark2);padding:24px 0;border-bottom:1px solid rgba(201,168,76,0.2);">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center">
+    <span style="color:var(--gold);font-weight:700"><i class="fas fa-map-marker-alt"></i> Available in:</span>
+    <span class="hammam-loc-badge" style="padding:8px 20px;font-size:0.95rem">📍 Sahl Hasheesh</span>
+    <span class="hammam-loc-badge" style="padding:8px 20px;font-size:0.95rem">📍 El Gouna</span>
+    <span class="hammam-loc-badge" style="padding:8px 20px;font-size:0.95rem">📍 Safaga</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Choose Your Experience</p>
+      <h2>Our Packages</h2>
+    </div>
+
+    <div class="hammam-packages">
+
+      <!-- TURKISH BATH -->
+      <div class="hammam-card">
+        <img class="hammam-img" src="https://hurghadafundaytrips.com/wp-content/uploads/2024/04/fun-day-trips-Hamam-Cleopatra3-300x300.jpg" alt="Turkish Bath" onerror="this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=300&fit=crop'"/>
+        <div class="hammam-card-header">
+          <div class="hammam-badge">Most Popular</div>
+          <div class="hammam-card-icon">🛁</div>
+          <h3>Turkish Bath</h3>
+        </div>
+        <div class="hammam-includes">
+          <ul>
+            <li>Welcome drink on arrival</li>
+            <li>Salt cave session</li>
+            <li>Sauna</li>
+            <li>Steam room</li>
+            <li>Jacuzzi</li>
+            <li>Full body scrub</li>
+            <li>Foam massage</li>
+          </ul>
+        </div>
+        <div class="hammam-locations">
+          <span class="hammam-loc-badge">Sahl Hasheesh</span>
+          <span class="hammam-loc-badge">El Gouna</span>
+          <span class="hammam-loc-badge">Safaga</span>
+        </div>
+        <div class="hammam-card-footer">
+          <a href="https://wa.me/201010233852?text=Hello! I want to book: Turkish Bath" class="hammam-book" target="_blank">
+            <i class="fab fa-whatsapp"></i> Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- MASSAGE 60 MIN -->
+      <div class="hammam-card">
+        <img class="hammam-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&h=300&fit=crop" alt="Massage 60min"/>
+        <div class="hammam-card-header">
+          <div class="hammam-badge" style="background:rgba(201,168,76,0.2);color:var(--gold);border:1px solid rgba(201,168,76,0.4)">Relaxation</div>
+          <div class="hammam-card-icon">💆</div>
+          <h3>Massage 60 min</h3>
+        </div>
+        <div class="hammam-includes">
+          <ul>
+            <li>60-minute full body massage</li>
+            <li>Choice of massage style</li>
+            <li>Premium massage oils</li>
+            <li>Relaxing atmosphere</li>
+            <li>Professional therapist</li>
+          </ul>
+        </div>
+        <div class="hammam-locations">
+          <span class="hammam-loc-badge">Sahl Hasheesh</span>
+          <span class="hammam-loc-badge">El Gouna</span>
+          <span class="hammam-loc-badge">Safaga</span>
+        </div>
+        <div class="hammam-card-footer">
+          <a href="https://wa.me/201010233852?text=Hello! I want to book: Massage 60 minutes" class="hammam-book" target="_blank">
+            <i class="fab fa-whatsapp"></i> Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- TURKISH BATH + MASSAGE -->
+      <div class="hammam-card">
+        <img class="hammam-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&h=300&fit=crop" alt="Turkish Bath + Massage"/>
+        <div class="hammam-card-header">
+          <div class="hammam-badge">Best Value</div>
+          <div class="hammam-card-icon">🧖</div>
+          <h3>Turkish Bath + Massage</h3>
+        </div>
+        <div class="hammam-includes">
+          <ul>
+            <li>Welcome drink on arrival</li>
+            <li>Salt cave session</li>
+            <li>Sauna</li>
+            <li>Steam room</li>
+            <li>Jacuzzi</li>
+            <li>Full body scrub</li>
+            <li>Foam massage</li>
+            <li>45-minute oil massage</li>
+          </ul>
+        </div>
+        <div class="hammam-locations">
+          <span class="hammam-loc-badge">Sahl Hasheesh</span>
+          <span class="hammam-loc-badge">El Gouna</span>
+          <span class="hammam-loc-badge">Safaga</span>
+        </div>
+        <div class="hammam-card-footer">
+          <a href="https://wa.me/201010233852?text=Hello! I want to book: Turkish Bath + Massage" class="hammam-book" target="_blank">
+            <i class="fab fa-whatsapp"></i> Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- CLEOPATRA PLUS -->
+      <div class="hammam-card" style="border-color:rgba(201,168,76,0.4);background:linear-gradient(180deg,rgba(201,168,76,0.06),var(--dark2))">
+        <img class="hammam-img" src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=300&fit=crop" alt="Cleopatra Plus"/>
+        <div class="hammam-card-header">
+          <div class="hammam-badge">⭐ Premium</div>
+          <div class="hammam-card-icon">👑</div>
+          <h3>Cleopatra Plus</h3>
+        </div>
+        <div class="hammam-includes">
+          <ul>
+            <li>Welcome drink on arrival</li>
+            <li>Salt cave session</li>
+            <li>Sauna</li>
+            <li>Steam room</li>
+            <li>Jacuzzi</li>
+            <li>Full body scrub</li>
+            <li>Foam massage</li>
+            <li>Full body peeling</li>
+            <li>Luxurious face mask</li>
+            <li>45-minute oil massage</li>
+          </ul>
+        </div>
+        <div class="hammam-locations">
+          <span class="hammam-loc-badge">Sahl Hasheesh</span>
+          <span class="hammam-loc-badge">El Gouna</span>
+          <span class="hammam-loc-badge">Safaga</span>
+        </div>
+        <div class="hammam-card-footer">
+          <a href="https://wa.me/201010233852?text=Hello! I want to book: Cleopatra Plus package" class="hammam-book" target="_blank">
+            <i class="fab fa-whatsapp"></i> Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- VIP ROOM -->
+      <div class="hammam-card vip" style="border-color:rgba(255,215,0,0.5);background:linear-gradient(180deg,rgba(255,215,0,0.08),var(--dark2))">
+        <img class="hammam-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=300&fit=crop" alt="VIP Room"/>
+        <div class="hammam-card-header">
+          <div class="hammam-badge vip-badge">💎 VIP Exclusive</div>
+          <div class="hammam-card-icon">👸</div>
+          <h3>VIP Room</h3>
+        </div>
+        <div class="hammam-includes">
+          <ul>
+            <li>🔒 Fully private experience</li>
+            <li>Private sauna — just for you</li>
+            <li>Private hammam suite</li>
+            <li>Private jacuzzi</li>
+            <li>Fresh seasonal fruits</li>
+            <li>Complimentary water & juices</li>
+            <li>Private massage room</li>
+            <li>Exclusive luxury ambiance</li>
+          </ul>
+        </div>
+        <div class="hammam-locations">
+          <span class="hammam-loc-badge" style="background:rgba(255,215,0,0.15);color:#FFD700">Sahl Hasheesh</span>
+          <span class="hammam-loc-badge" style="background:rgba(255,215,0,0.15);color:#FFD700">El Gouna</span>
+          <span class="hammam-loc-badge" style="background:rgba(255,215,0,0.15);color:#FFD700">Safaga</span>
+        </div>
+        <div class="hammam-card-footer">
+          <a href="https://wa.me/201010233852?text=Hello! I want to book the VIP Room at the Turkish Bath" class="hammam-book" target="_blank" style="background:linear-gradient(135deg,#C9A84C,#E8C875);color:var(--dark)">
+            <i class="fab fa-whatsapp"></i> Book VIP Experience
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BENEFITS SECTION -->
+    <div class="section-header">
+      <p class="section-tag">Benefits</p>
+      <h2>The Art of the Hammam</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Deep Cleansing</h3>
+        <p>The steam and scrub process removes dead skin cells, leaving your skin soft, smooth, and glowing</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+        <h3>Total Relaxation</h3>
+        <p>Release stress and tension as the heat and expert massage melt away the pressures of daily life</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tint"></i></div>
+        <h3>Skin Rejuvenation</h3>
+        <p>Improve circulation and skin elasticity. Your body will feel refreshed and completely renewed</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h3>Ancient Tradition</h3>
+        <p>Experience a centuries-old wellness ritual that has been refined and perfected through generations</p>
+      </div>
+    </div>
+
+    <!-- BOOK CTA -->
+    <div style="text-align:center;margin-top:60px;background:var(--dark2);border-radius:var(--radius);padding:60px 40px;border:1px solid rgba(201,168,76,0.2)">
+      <div style="font-size:3rem;margin-bottom:16px">🛁</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2.5rem;color:white;margin-bottom:16px">Ready to Relax?</h2>
+      <p style="color:var(--text-muted);font-size:1.1rem;margin-bottom:32px">Book your Turkish Bath experience now via WhatsApp. We serve Sahl Hasheesh, El Gouna, and Safaga.</p>
+      <a href="https://wa.me/201010233852?text=Hello! I want to book a Turkish Bath experience. Please send me more details." class="btn-whatsapp" target="_blank" style="display:inline-flex">
+        <i class="fab fa-whatsapp"></i> Book Your Spa Experience
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fas fa-paper-plane"></i> Happy Travel</div>
+        <p>We specialize in tourism across Egypt's most iconic destinations — offering reliable, customized travel experiences.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61573420178782" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/?__pwa=1" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/201010233852" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li><li><a href="transfer.html">Transfer</a></li><li><a href="hammam.html">Turkish Bath</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Spa Packages</h4><ul><li>🛁 Turkish Bath</li><li>💆 Massage 60 min</li><li>🧖 Turkish Bath + Massage</li><li>👑 Cleopatra Plus</li><li>💎 VIP Room</li></ul></div>
+      <div class="footer-col"><h4>Locations</h4><ul><li>📍 Sahl Hasheesh</li><li>📍 El Gouna</li><li>📍 Safaga</li><li><i class="fab fa-whatsapp"></i> 01010233852</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Happy Travel. All Rights Reserved.</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="public/js/i18n.js"></script>
+<script src="public/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

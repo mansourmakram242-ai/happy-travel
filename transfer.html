@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transfer Services - Happy Travel</title>
+  <link rel="stylesheet" href="public/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-text"><i class="fas fa-paper-plane logo-icon"></i><span>Happy Travel</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="transfer.html" data-i18n="nav_transfer">Transfer</a></li>
+      <li><a href="hammam.html" data-i18n="nav_hammam">Turkish Bath</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i> <span id="currentLang">EN</span> <i class="fas fa-chevron-down"></i></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN"/> English</a>
+          <a href="#" onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png" alt="DE"/> Deutsch</a>
+          <a href="#" onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png" alt="FR"/> Français</a>
+        </div>
+      </div>
+      <a href="https://wa.me/201010233852" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <p class="section-tag"><i class="fas fa-car"></i> Red Sea Riviera</p>
+    <h1>Transfer Services</h1>
+    <p>Comfortable, private, and reliable transfers across Hurghada, El Gouna, Sahl Hasheesh, Safaga & Makadi Bay</p>
+  </div>
+</div>
+
+<!-- SERVICE AREAS BANNER -->
+<div style="background:var(--dark2);padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.15);">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;">
+    <span style="color:var(--gold);font-weight:700;margin-right:8px"><i class="fas fa-map-marker-alt"></i> Service Areas:</span>
+    <span class="area-badge" style="font-size:0.9rem;padding:8px 18px">🏖️ Hurghada</span>
+    <span class="area-badge" style="font-size:0.9rem;padding:8px 18px">⛵ El Gouna</span>
+    <span class="area-badge" style="font-size:0.9rem;padding:8px 18px">🌟 Sahl Hasheesh</span>
+    <span class="area-badge" style="font-size:0.9rem;padding:8px 18px">⚓ Safaga</span>
+    <span class="area-badge" style="font-size:0.9rem;padding:8px 18px">🏝️ Makadi Bay</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Door to Door</p>
+      <h2>Our Transfer Services</h2>
+    </div>
+    <div class="transfer-grid" id="transferGrid">
+      <div class="loading-spinner"><i class="fas fa-car fa-spin"></i></div>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <div class="section-header" style="margin-top:60px">
+      <p class="section-tag">Why Choose Us</p>
+      <h2>Comfortable & Reliable</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-snowflake"></i></div>
+        <h3>Air-Conditioned Vehicles</h3>
+        <p>All our vehicles are fully air-conditioned and regularly maintained for your comfort</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+        <h3>Always On Time</h3>
+        <p>Punctual and professional drivers who monitor your flight and arrival times</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Safe & Professional</h3>
+        <p>Licensed drivers with years of experience ensuring your safety and comfort</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>We're available around the clock via WhatsApp for any assistance you need</p>
+      </div>
+    </div>
+
+    <!-- BOOK CTA -->
+    <div class="cta-section" style="position:relative;padding:80px 0;margin-top:60px;border-radius:var(--radius);overflow:hidden">
+      <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1400&fit=crop')"></div>
+      <div class="cta-overlay"></div>
+      <div class="cta-content">
+        <h2>Need a Transfer?</h2>
+        <p>Contact us now for an instant quote. Available 24/7!</p>
+        <a href="https://wa.me/201010233852?text=Hello! I need a transfer service." class="btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> Book Your Transfer Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fas fa-paper-plane"></i> Happy Travel</div>
+        <p>We specialize in tourism across Egypt's most iconic destinations — offering reliable, customized travel experiences.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61573420178782" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/?__pwa=1" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/201010233852" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li><li><a href="transfer.html">Transfer</a></li><li><a href="hammam.html">Turkish Bath</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Transfer Areas</h4><ul><li>🏖️ Hurghada</li><li>⛵ El Gouna</li><li>🌟 Sahl Hasheesh</li><li>⚓ Safaga</li><li>🏝️ Makadi Bay</li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><i class="fab fa-whatsapp"></i> 01010233852</li><li><i class="fas fa-envelope"></i> info@happytravel.com</li><li><i class="fas fa-map-marker-alt"></i> Hurghada, Egypt</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© <span id="year"></span> Happy Travel. All Rights Reserved.</p></div>
+  </div>
+</footer>
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="public/js/i18n.js"></script>
+<script src="public/js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', loadTransfers);
+</script>
+</body>
+</html>

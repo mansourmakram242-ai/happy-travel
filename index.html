@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Travel - Discover Egypt</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="public/images/logo.png" alt="Happy Travel" onerror="this.style.display='none'; this.nextSibling.style.display='flex'"/>
+      <div class="logo-text" style="display:flex;align-items:center;gap:8px">
+        <i class="fas fa-paper-plane logo-icon"></i>
+        <span>Happy Travel</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+      <li><a href="transfer.html" data-i18n="nav_transfer">Transfer</a></li>
+      <li><a href="hammam.html" data-i18n="nav_hammam">Turkish Bath</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn"><i class="fas fa-globe"></i> <span id="currentLang">EN</span> <i class="fas fa-chevron-down"></i></button>
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN"/> English</a>
+          <a href="#" onclick="setLang('de')"><img src="https://flagcdn.com/w20/de.png" alt="DE"/> Deutsch</a>
+          <a href="#" onclick="setLang('fr')"><img src="https://flagcdn.com/w20/fr.png" alt="FR"/> Français</a>
+        </div>
+      </div>
+      <a href="https://wa.me/201010233852" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="whatsapp_btn">WhatsApp</span></a>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg" style="background-image:url('https://hurghadafundaytrips.com/wp-content/uploads/2024/04/fun-day-trips-photos-orange-pay4-300x300.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tagline" data-i18n="hero_tagline">✦ Discover the Magic of Egypt ✦</p>
+    <h1 class="hero-title" data-i18n="hero_title">Unforgettable Journeys Across Egypt</h1>
+    <p class="hero-sub" data-i18n="hero_sub">Expert guides · Tailored tours · Lifelong memories</p>
+    <div class="hero-btns">
+      <a href="tours.html" class="btn-primary" data-i18n="hero_find">Explore Tours</a>
+      <a href="https://wa.me/201010233852" class="btn-ghost" target="_blank" data-i18n="hero_contact">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section destinations">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag" data-i18n="dest_tag">Egypt Awaits</p>
+      <h2 data-i18n="dest_title">Highlights of Egypt</h2>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card" onclick="filterTours('Cairo')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/Cairo-City-400x400.jpg" alt="Cairo" onerror="this.src='https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Cairo</h3></div>
+      </div>
+      <div class="dest-card" onclick="filterTours('Luxor')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/Luxor-Temple-Temple-of-Luxor-Luxor-Temple-Facts-400x400.webp" alt="Luxor" onerror="this.src='https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Luxor</h3></div>
+      </div>
+      <div class="dest-card" onclick="filterTours('Aswan')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/Great-nile-aswan-400x400.jpg" alt="Aswan" onerror="this.src='https://images.unsplash.com/photo-1592565661395-62f8ee4cec3b?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Aswan</h3></div>
+      </div>
+      <div class="dest-card" onclick="filterTours('Hurghada')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/Makadi-Bay-Beaches-in-Hurghada-Egypt-Tours-Portal-400x400.jpg" alt="Hurghada" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Hurghada</h3></div>
+      </div>
+      <div class="dest-card" onclick="filterTours('Alexandria')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/alexandria-1-400x400.webp" alt="Alexandria" onerror="this.src='https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Alexandria</h3></div>
+      </div>
+      <div class="dest-card" onclick="filterTours('Sharm El Sheikh')">
+        <img src="https://cleovatours.com/wp-content/uploads/2025/12/944d610146b9f28ad3ed349ad09f2fd1-scaled-400x400.webp" alt="Sharm El Sheikh" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop'"/>
+        <div class="dest-info"><h3>Sharm El Sheikh</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section class="section tours-section" id="toursSection">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag" data-i18n="tours_tag">Curated Experiences</p>
+      <h2 data-i18n="tours_title">Recommended Tours</h2>
+    </div>
+    <div class="tours-grid" id="toursGrid">
+      <div class="loading-spinner"><i class="fas fa-compass fa-spin"></i></div>
+    </div>
+    <div class="center-btn">
+      <a href="tours.html" class="btn-primary" data-i18n="tours_more">View All Tours</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-us">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag" data-i18n="why_tag">Why Happy Travel</p>
+      <h2 data-i18n="why_title">Travel With Confidence</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+        <h3 data-i18n="feat1_title">Expert Guides</h3>
+        <p data-i18n="feat1_text">Professional Egyptologist guides with years of experience</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h3 data-i18n="feat2_title">Premium Service</h3>
+        <p data-i18n="feat2_text">Comfortable vehicles and 5-star hospitality throughout</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-route"></i></div>
+        <h3 data-i18n="feat3_title">Custom Tours</h3>
+        <p data-i18n="feat3_text">Tailor-made itineraries designed for your preferences</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <h3 data-i18n="feat4_title">24/7 Support</h3>
+        <p data-i18n="feat4_text">We're always available via WhatsApp for any assistance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1400&fit=crop')"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2 data-i18n="cta_title">Ready for Your Egyptian Adventure?</h2>
+    <p data-i18n="cta_sub">Contact us now and let us craft your perfect journey</p>
+    <a href="https://wa.me/201010233852" class="btn-whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">Chat on WhatsApp</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fas fa-paper-plane"></i> Happy Travel</div>
+        <p data-i18n="footer_about">We specialize in domestic tourism across Egypt's most iconic destinations — offering reliable, customized travel experiences.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61573420178782" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/?__pwa=1" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/201010233852" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+          <li><a href="transfer.html" data-i18n="nav_transfer">Transfer</a></li>
+      <li><a href="hammam.html" data-i18n="nav_hammam">Turkish Bath</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_destinations">Destinations</h4>
+        <ul>
+          <li><a href="tours.html?loc=Cairo">Cairo</a></li>
+          <li><a href="tours.html?loc=Luxor">Luxor</a></li>
+          <li><a href="tours.html?loc=Aswan">Aswan</a></li>
+          <li><a href="tours.html?loc=Hurghada">Hurghada</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <ul>
+          <li><i class="fab fa-whatsapp"></i> 01010233852</li>
+          <li><i class="fas fa-envelope"></i> info@happytravel.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Egypt</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Happy Travel. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/201010233852" class="wa-float" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="public/js/i18n.js"></script>
+<script src="public/js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  loadFeaturedTours();
+</script>
+</body>
+</html>
